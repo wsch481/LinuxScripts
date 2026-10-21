@@ -1,5 +1,5 @@
 These files assume you are installing a new Debian 13 server VM on XCP-NG. Please read the comments in the files and change as needed.
-You will need to setup a small web server to host the two files.
+You will need to setup a small web server to host the two files. Be aware of firewalls blocking incoming requests.
 
 NGINX (Debian/Ubuntu)
 
