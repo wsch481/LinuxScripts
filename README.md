@@ -4,24 +4,24 @@ You will need to setup a small web server i.e. NGINX, Python, etc. to host the t
 Debian Server Auto install
 
 Initialize Infrastructure:
-    Create the server in XO.
-    Choose Installation Mode from boot menu:
-    Choose Advanced Options > Automated install
+Create the server in XO.
+Choose Installation Mode from boot menu:
+Choose Advanced Options > Automated install
 
 Provide Preconfiguration File:
-    Enter https://<URL>/debiansvr.cfg when prompted
+Enter https://<URL>/debiansvr.cfg when prompted
 
 Log Into The Server:
-    SSH to the new server user /<USERNAME>/ pass changeme
+SSH to the new server username password changeme
     
     ssh <USERNAME>@<IP FROM debiansvr.cfg FILE>
 
 Execute Finalization Script:
-    Once downloaded run and follow prompts:
+Once downloaded run and follow prompts:
 
     wget https://<URL>/serversetup.sh
     chmod +x ./serversetup.sh
     sudo ./serversetup.sh
 
 Update the DNS Server:
-    Add new a new A record for the Server
+Add new a new A record for the Server
