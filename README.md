@@ -14,19 +14,19 @@ Windows cmd
 
     python -m http.server 80
 
-Debian Server Auto install
+*** Debian Server Auto install ***
 
 Initialize Infrastructure:
 
-Create the server in XO.
+- Create the server in XO.
 
 Choose Installation Mode from boot menu:
 
-Choose Advanced Options > Automated install
+- Choose Advanced Options > Automated install
 
 Provide Preconfiguration File:
 
-Enter https://<URL>/debiansvr.cfg when prompted
+- Enter https://<URL>/debiansvr.cfg when prompted
 
 Log Into The Server:
 
