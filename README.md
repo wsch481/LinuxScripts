@@ -11,10 +11,12 @@ Choose Installation Mode from boot menu:
 Choose Advanced Options > Automated install
 Provide Preconfiguration File:
 
-Enter https://<URL>/... when prompted
+Enter https://<URL>/debiansvr.cfg when prompted
+
 Log Into The Server:
 
-SSH to the new server user <USERNAME> pass changeme
+SSH to the new server user /<USERNAME>/ pass changeme
+    
     ssh <USERNAME>@<IP FROM debiansvr.cfg FILE>
 
 Execute Finalization Script:
