@@ -1,14 +1,18 @@
 These files assume you are installing a new Debian 13 server VM on XCP-NG. Please read the comments in the files and change as needed.
 You will need to setup a small web server to host the two files.
 
-NGINX
+NGINX (Debian/Ubuntu)
 
     sudo apt update
     sudo apt install nginx -y
 
-Python
+Python (Most Linux)
 
     sudo python3 -m http.server 80
+
+Windows cmd
+
+    python -m http.server 80
 
 Debian Server Auto install
 
