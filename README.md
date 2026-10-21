@@ -1,34 +1,30 @@
 These files assume you are installing a new Debian 13 server VM on XCP-NG. Please read the comments in the files and change as needed.
+You will need to setup a small web server i.e. NGINX, Python, etc. to host the two files.
 
 Debian Server Auto install
 
-    Initialize Infrastructure:
+Initialize Infrastructure:
 
-    Create the server in XO.
-    Choose Installation Mode from boot menu:
+Create the server in XO.
+Choose Installation Mode from boot menu:
 
-    Choose Advanced Options > Automated install
-    Provide Preconfiguration File:
+Choose Advanced Options > Automated install
+Provide Preconfiguration File:
 
-    Enter https://www.theabode.cc/downloads/debiansvr.cfg when prompted
-    Log Into The Server:
+Enter https://<URL>/... when prompted
+Log Into The Server:
 
-    SSH to 192.168.86.99 user <USERNAME> pass changeme
-    Terminal Commands
-    Copy
-
+SSH to the new server user <USERNAME> pass changeme
     ssh <USERNAME>@<IP FROM debiansvr.cfg FILE>
 
-    Execute Finalization Script:
+Execute Finalization Script:
 
-    Once downloaded run and follow prompts:
-    Terminal Commands
-    Copy
+Once downloaded run and follow prompts:
 
-    wget https://www.theabode.cc/downloads/serversetup.sh
+    wget https://<URL>/serversetup.sh
     chmod +x ./serversetup.sh
     sudo ./serversetup.sh
 
-    Update the DNS Server:
+Update the DNS Server:
 
-    login to the DNS Server and create the new A record
+login to the DNS Server and create the new A record
