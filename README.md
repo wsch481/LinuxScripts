@@ -17,19 +17,25 @@ Windows cmd
 Debian Server Auto install
 
 Initialize Infrastructure:
+
 Create the server in XO.
+
 Choose Installation Mode from boot menu:
+
 Choose Advanced Options > Automated install
 
 Provide Preconfiguration File:
+
 Enter https://<URL>/debiansvr.cfg when prompted
 
 Log Into The Server:
+
 SSH to the new server username password changeme
     
     ssh <USERNAME>@<IPFROMdebiansvr.cfg>
 
 Execute Finalization Script:
+
 Once downloaded run and follow prompts:
 
     wget https://<URL>/serversetup.sh
@@ -37,4 +43,5 @@ Once downloaded run and follow prompts:
     sudo ./serversetup.sh
 
 Update the DNS Server:
+
 Add new a new A record for the Server
