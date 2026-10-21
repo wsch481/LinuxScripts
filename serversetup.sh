@@ -83,14 +83,22 @@ fi
 # Update Static IP Address
 # This updates the classic Debian network interfaces configuration file.
 TARGET_NET_FILE="/etc/network/interfaces"
-OLD_IP="192.168.86.99"
+
+# Dynamically find the current primary IP address
+OLD_IP=$(hostname -I | awk '{print $1}')
+
+# Ensure we actually found an IP address before proceeding
+if [ -z "$OLD_IP" ]; then
+  echo "Error: Could not determine the current IP address."
+  exit 1
+fi
 
 if [ -f "$TARGET_NET_FILE" ]; then
   if grep -q "$OLD_IP" "$TARGET_NET_FILE"; then
     echo "Updating IP address from $OLD_IP to $NEW_IP in $TARGET_NET_FILE..."
     sed -i "s/$OLD_IP/$NEW_IP/g" "$TARGET_NET_FILE"
   else
-    echo "Warning: Old IP address ($OLD_IP) was not found in $TARGET_NET_FILE."
+    echo "Warning: Current IP address ($OLD_IP) was not found in $TARGET_NET_FILE."
   fi
 else
   echo "Warning: $TARGET_NET_FILE not found. If you use NetworkManager, you may need to update your IP via nmcli."
