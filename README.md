@@ -14,7 +14,7 @@ Enter https://<URL>/debiansvr.cfg when prompted
 Log Into The Server:
 SSH to the new server username password changeme
     
-    ssh <USERNAME>@<IP FROM debiansvr.cfg FILE>
+    ssh <USERNAME>@<IPFROMdebiansvr.cfg>
 
 Execute Finalization Script:
 Once downloaded run and follow prompts:
